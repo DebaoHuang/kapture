@@ -498,7 +498,7 @@ def _export_openmvg_sfm_data(
 
     # refer to the original image dir when skipping image transfer.
     if image_action == TransferAction.skip:
-        openmvg_image_root_path = get_image_fullpath(kapture_path)
+        openmvg_image_root_path = openmvg_image_root_path
 
     if openmvg_image_root_path is None:
         raise ValueError(f'openmvg_image_root_path must be defined to be able to perform {image_action}.')

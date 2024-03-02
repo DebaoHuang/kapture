@@ -28,7 +28,7 @@ np.float = float  # monkey patch
 # file names conventions
 CSV_FILENAMES = {
     kapture.Sensors: path.join('sensors', 'sensors.txt'),
-    kapture.Trajectories: path.join('sensors', 'trajectories.txt'),
+    # kapture.Trajectories: path.join('sensors', 'trajectories.txt'),
     kapture.Rigs: path.join('sensors', 'rigs.txt'),
     kapture.RecordsCamera: path.join('sensors', 'records_camera.txt'),
     kapture.RecordsDepth: path.join('sensors', 'records_depth.txt'),
@@ -1458,7 +1458,7 @@ def kapture_to_dir(kapture_dirpath: str, kapture_data: kapture.Kapture) -> None:
 KAPTURE_LOADABLE_TYPES = {
     kapture.Sensors,
     kapture.Rigs,
-    kapture.Trajectories,
+    # kapture.Trajectories,
     kapture.RecordsCamera,
     kapture.RecordsDepth,
     kapture.RecordsLidar,

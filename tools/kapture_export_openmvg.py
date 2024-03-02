@@ -85,15 +85,13 @@ def export_openmvg_command_line():
         args.regions = path.join(args.openmvg, 'matches')
         logger.debug(f'guessing output regions is {args.regions}')
     if args.openmvg and args.matches is None:
-        args.matches = path.join(args.openmvg, 'matches', 'matches.txt')
+        args.matches = path.join(args.openmvg, 'matches', 'matches.f.txt')
         logger.debug(f'guessing output matches is {args.matches}')
 
     # no image dir == skip transfer
     if args.images is None:
         logger.info('No images directory provided, skipping image files transfer')
         args.image_action = TransferAction.skip
-    if args.image_action == TransferAction.skip:
-        args.images = None
 
     export_openmvg(args.kapture,
                    args.sfm_data,
